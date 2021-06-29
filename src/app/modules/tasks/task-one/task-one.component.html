@@ -1,7 +1,4 @@
-<div class="space-bottom-50px">
-    <h2>Task one - auto mode</h2>
-    <span><a [routerLink]="['/home']"> Dashboard </a> </span> / <span>Task one</span>
-</div>
+<app-page-header [currentPage]="pageTitle"></app-page-header>
 <ng-container *ngFor="let animal of animals">
     <div class="space-bottom-20px">
         <p>Old MacDonald had a farm, E I E I O</p>

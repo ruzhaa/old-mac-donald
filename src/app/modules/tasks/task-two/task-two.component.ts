@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-task-two',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./task-two.component.scss']
 })
 export class TaskTwoComponent implements OnInit {
+    pageTitle = 'Task two - manual mode';
 
-    constructor() { }
+    constructor(
+        private _titleService: Title
+    ) {
+        this._titleService.setTitle(this.pageTitle);
+    }
 
     ngOnInit(): void { }
 

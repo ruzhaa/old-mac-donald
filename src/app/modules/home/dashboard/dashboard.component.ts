@@ -7,12 +7,14 @@ import { Title } from '@angular/platform-browser';
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+    pageTitle = 'Dashboard';
 
     constructor(
         private _titleService: Title
     ) {
-        this._titleService.setTitle('Dashboard');
+        this._titleService.setTitle(this.pageTitle);
     }
+
     ngOnInit(): void {
     }
 

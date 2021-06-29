@@ -8,6 +8,8 @@ import { Animal, IAnimal } from 'src/app/shared';
     styleUrls: ['./task-one.component.scss']
 })
 export class TaskOneComponent implements OnInit {
+    pageTitle = 'Task one - auto mode';
+
     animals: IAnimal[] = [
         new Animal({ species: 'cat', sound: 'meow' }),
         new Animal({ species: 'sheep', sound: 'baa' }),
@@ -19,7 +21,7 @@ export class TaskOneComponent implements OnInit {
     constructor(
         private _titleService: Title
     ) {
-        this._titleService.setTitle('Task one - auto mode');
+        this._titleService.setTitle(this.pageTitle);
     }
 
     ngOnInit(): void { }
