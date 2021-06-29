@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Animal, IAnimal } from 'src/app/shared';
 
 @Component({
@@ -15,7 +16,11 @@ export class TaskOneComponent implements OnInit {
         new Animal({ species: 'horse', sound: 'neigh' }),
     ];
 
-    constructor() { }
+    constructor(
+        private _titleService: Title
+    ) {
+        this._titleService.setTitle('Task one - auto mode');
+    }
 
     ngOnInit(): void { }
 
