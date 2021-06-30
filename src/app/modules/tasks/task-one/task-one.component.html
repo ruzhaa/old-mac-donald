@@ -1,20 +1,2 @@
 <app-page-header [currentPage]="pageTitle"></app-page-header>
-<ng-container *ngFor="let animal of animals">
-    <div class="space-bottom-20px">
-        <p>Old MacDonald had a farm, E I E I O</p>
-        <p>
-            And on that farm he had {{ (animal.species | startWithVowel) ? 'an' : 'a' }} {{ animal.species }}, E I E I
-            O.
-        </p>
-        <p>
-            With {{ (animal.sound | startWithVowel) ? 'an' : 'a' }} {{ animal.sound }}-{{ animal.sound }} here and
-            {{ (animal.sound | startWithVowel) ? 'an' : 'a' }} {{ animal.sound }}-{{ animal.sound }} there,
-        </p>
-        <p>
-            Here {{ (animal.sound | startWithVowel) ? 'an' : 'a' }} {{ animal.sound }}, there
-            {{ (animal.sound | startWithVowel) ? 'an' : 'a' }} {{ animal.sound }}, ev'rywhere
-            {{ (animal.sound | startWithVowel) ? 'an' : 'a' }} {{ animal.sound }}-{{ animal.sound }}
-        </p>
-        <p>Old MacDonald had a farm, E I E I O</p>
-    </div>
-</ng-container>
+<app-song [animals]="animals"></app-song>
