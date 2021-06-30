@@ -64,6 +64,4 @@
     </div>
 </form>
 
-<ng-container *ngIf="selectedAnimals?.length">
-    <app-song [animals]="selectedAnimals"></app-song>
-</ng-container>
+<app-song *ngIf="selectedAnimals?.length" [animals]="selectedAnimals"></app-song>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IAnimal } from '../../interfaces';
+import { IAnimal } from 'src/app/shared';
 
 @Component({
     selector: 'app-verse',

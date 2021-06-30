@@ -56,8 +56,6 @@ import { CardModule } from 'primeng/card';
         AutoCompleteModule,
         ButtonModule,
         CardModule
-
-
     ]
 })
 export class SharedModule {

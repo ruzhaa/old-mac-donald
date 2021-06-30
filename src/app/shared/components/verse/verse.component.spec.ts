@@ -1,25 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
+import { StartWithVowelPipe } from '../../pipes';
 
 import { VerseComponent } from './verse.component';
 
 describe('VerseComponent', () => {
-  let component: VerseComponent;
-  let fixture: ComponentFixture<VerseComponent>;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VerseComponent ]
+      declarations: [VerseComponent, StartWithVowelPipe],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VerseComponent);
-    component = fixture.componentInstance;
+    const fixture = TestBed.createComponent(VerseComponent);
     fixture.detectChanges();
   });
 
   it('should create', () => {
+    const fixture = TestBed.createComponent(VerseComponent);
+    const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 });
