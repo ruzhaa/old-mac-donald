@@ -1,6 +1,26 @@
-<p>
-    <a [routerLink]="['/home', 'tasks', 'auto']"> Show task one</a>
-</p>
-<p>
-    <a [routerLink]="['/home', 'tasks', 'manual']"> Show task two</a>
-</p>
+<div class="space-bottom-50px">
+    <h1>The OldMacDonald app</h1>
+</div>
+
+<div class="space-bottom-30px">
+    <p-card header="Task one - auto mode">
+        <div class="card-content">
+            <p>
+                SPA is showing 5 verses of the nursery rhyme “Old MacDonald Had a Farm” with 5 animals of my choosing.
+            </p>
+        </div>
+        <div>
+            <a [routerLink]="['/home', 'tasks', 'auto']" class="btn btn-default">Show</a>
+        </div>
+    </p-card>
+</div>
+<div>
+    <p-card header="Task two - manual mode">
+        <div class="card-content">
+            <p>The user can choose to have 3 animals and then the app renders the 3 verses.</p>
+        </div>
+        <div>
+            <a [routerLink]="['/home', 'tasks', 'manual']" class="btn btn-default">Show</a>
+        </div>
+    </p-card>
+</div>
