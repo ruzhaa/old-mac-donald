@@ -1,0 +1,19 @@
+<div class="space-bottom-20px">
+    <p>Old MacDonald had a farm, E I E I O</p>
+    <p>And on that farm he had {{ (animal.species | startWithVowel) ? 'an' : 'a' }} {{ animal.species }}, E I E I O.</p>
+    <p>
+        With {{ (animal.getSound() | startWithVowel) ? 'an' : 'a' }} {{ animal.getSound() }}-{{
+            animal.getSound()
+        }}
+        here and {{ (animal.getSound() | startWithVowel) ? 'an' : 'a' }} {{ animal.getSound() }}-{{
+            animal.getSound()
+        }}
+        there,
+    </p>
+    <p>
+        Here {{ (animal.getSound() | startWithVowel) ? 'an' : 'a' }} {{ animal.getSound() }}, there
+        {{ (animal.getSound() | startWithVowel) ? 'an' : 'a' }} {{ animal.getSound() }}, ev'rywhere
+        {{ (animal.getSound() | startWithVowel) ? 'an' : 'a' }} {{ animal.getSound() }}-{{ animal.getSound() }}
+    </p>
+    <p>Old MacDonald had a farm, E I E I O</p>
+</div>
