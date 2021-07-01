@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+$color-danger: #6A041D;
+$color-link: #2196F3;
+$color-hover: #F5B841;
+$color-main: #F87060;
+
+body {
+    margin: 0;
+}
+
+#mainContainer {
+    max-width: 960px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+.danger-color {
+    color: $color-danger;
+}
+
+@for $space from 1 through 50 {
+    .space-bottom-#{$space}px {
+        margin-bottom: #{$space}px;
+    }
+}
+
+@for $space from 1 through 50 {
+    .space-left-#{$space}px {
+        margin-left: #{$space}px;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $color-link;
+
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+
+    &.btn-default {
+        border: 1px solid $color-main;
+        background-color: $color-main;
+        color: white;
+
+        &:hover {
+            border: 1px solid $color-hover;
+            background-color: $color-hover;
+        }
+    }
+}
+
+.max-width {
+    width: 100%;
+
+    .p-inputtext {
+        width: 100%;
+    }
+}
+
+.card-content {
+    margin-bottom: 20px;
+}

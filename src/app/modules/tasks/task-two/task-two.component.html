@@ -1,1 +1,67 @@
-<p>task-two works!</p>
+<app-page-header [currentPage]="pageTitle"></app-page-header>
+<form [formGroup]="formData">
+    <div class="space-bottom-30px">
+        <div class="space-bottom-10px">
+            <div class="space-bottom-10px">
+                <p-autoComplete
+                    formControlName="selected_animals"
+                    [suggestions]="filteredAnimals"
+                    [multiple]="true"
+                    [maxlength]="3"
+                    [placeholder]="'Select animals'"
+                    [dropdown]="true"
+                    styleClass="max-width"
+                    (onDropdownClick)="filterAnimal($event)"
+                    (completeMethod)="filterAnimal($event)"
+                >
+                    <ng-template let-animal pTemplate="selectedItem">
+                        <span>{{ getAnimalInfo(animal) }}</span>
+                    </ng-template>
+                    <ng-template let-animal pTemplate="item">
+                        <span>{{ getAnimalInfo(animal) }}</span>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+            <div
+                *ngIf="
+                    formData.get('selected_animals').touched &&
+                    formData.get('selected_animals').invalid &&
+                    formData.get('selected_animals').errors?.required
+                "
+            >
+                <p class="danger-color">This field is required!</p>
+            </div>
+            <div
+                *ngIf="
+                    formData.get('selected_animals').touched &&
+                    formData.get('selected_animals').invalid &&
+                    formData.get('selected_animals').errors?.maxlength
+                "
+            >
+                <p class="danger-color">
+                    Maximum number of animals are
+                    {{ formData.get('selected_animals').errors?.maxlength?.requiredLength }}
+                </p>
+            </div>
+        </div>
+        <div>
+            <button
+                pButton
+                type="submit"
+                label="Generate"
+                (click)="generateSong()"
+                [disabled]="formData.invalid"
+            ></button>
+            <button
+                class="space-left-20px p-button-outlined p-button-secondary"
+                pButton
+                [disabled]="!selectedAnimals?.length"
+                type="submit"
+                label="Clear"
+                (click)="resetForm()"
+            ></button>
+        </div>
+    </div>
+</form>
+
+<app-song *ngIf="selectedAnimals?.length" [animals]="selectedAnimals"></app-song>

@@ -1,30 +1,30 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskOneComponent } from './task-one.component';
+import { DashboardComponent } from './dashboard.component';
 
-describe('TaskOneComponent', () => {
+describe('DashboardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TaskOneComponent]
+      declarations: [DashboardComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
+    const fixture = TestBed.createComponent(DashboardComponent);
     const component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
+    const fixture = TestBed.createComponent(DashboardComponent);
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 
-  it('should animals be equal 5', () => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
+  it(`should title be equal 'Dashboard'`, () => {
+    const fixture = TestBed.createComponent(DashboardComponent);
     const component = fixture.componentInstance;
-    expect(component.animals.length).toEqual(5);
+    expect(component.pageTitle).toEqual('Dashboard');
   });
 });
