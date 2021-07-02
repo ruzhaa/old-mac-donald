@@ -1,30 +1,28 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [DashboardComponent]
-    })
-      .compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [DashboardComponent],
+        }).compileComponents();
+    }));
 
-  beforeEach(() => {
-    const fixture = TestBed.createComponent(DashboardComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        const fixture = TestBed.createComponent(DashboardComponent);
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    const fixture = TestBed.createComponent(DashboardComponent);
-    const component = fixture.componentInstance;
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        const fixture = TestBed.createComponent(DashboardComponent);
+        const component = fixture.componentInstance;
+        expect(component).toBeTruthy();
+    });
 
-  it(`should title be equal 'Dashboard'`, () => {
-    const fixture = TestBed.createComponent(DashboardComponent);
-    const component = fixture.componentInstance;
-    expect(component.pageTitle).toEqual('Dashboard');
-  });
+    it(`should title be equal 'Dashboard'`, () => {
+        const fixture = TestBed.createComponent(DashboardComponent);
+        const component = fixture.componentInstance;
+        expect(component.pageTitle).toEqual('Dashboard');
+    });
 });

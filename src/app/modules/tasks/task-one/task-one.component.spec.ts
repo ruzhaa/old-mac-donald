@@ -1,30 +1,28 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { TaskOneComponent } from './task-one.component';
 
 describe('TaskOneComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TaskOneComponent]
-    })
-      .compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [TaskOneComponent],
+        }).compileComponents();
+    }));
 
-  beforeEach(() => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        const fixture = TestBed.createComponent(TaskOneComponent);
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
-    const component = fixture.componentInstance;
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        const fixture = TestBed.createComponent(TaskOneComponent);
+        const component = fixture.componentInstance;
+        expect(component).toBeTruthy();
+    });
 
-  it('should animals be equal 5', () => {
-    const fixture = TestBed.createComponent(TaskOneComponent);
-    const component = fixture.componentInstance;
-    expect(component.animals.length).toEqual(5);
-  });
+    it('should animals be equal 5', () => {
+        const fixture = TestBed.createComponent(TaskOneComponent);
+        const component = fixture.componentInstance;
+        expect(component.animals.length).toEqual(5);
+    });
 });

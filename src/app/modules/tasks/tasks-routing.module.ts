@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { TaskOneComponent } from './task-one/task-one.component';
 import { TaskTwoComponent } from './task-two/task-two.component';
 
-
 const routes: Routes = [
     {
         path: '',
@@ -12,16 +11,16 @@ const routes: Routes = [
     },
     {
         path: 'auto',
-        component: TaskOneComponent
+        component: TaskOneComponent,
     },
     {
         path: 'manual',
-        component: TaskTwoComponent
+        component: TaskTwoComponent,
     },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
-export class TasksRoutingModule { }
+export class TasksRoutingModule {}

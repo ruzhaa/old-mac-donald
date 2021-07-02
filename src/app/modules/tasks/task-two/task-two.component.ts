@@ -6,7 +6,7 @@ import { Bee, Cat, Duck, Hen, Horse, IAnimal, Pig, Sheep } from 'src/app/shared'
 @Component({
     selector: 'app-task-two',
     templateUrl: './task-two.component.html',
-    styleUrls: ['./task-two.component.scss']
+    styleUrls: ['./task-two.component.scss'],
 })
 export class TaskTwoComponent implements OnInit {
     pageTitle = 'Task two - manual mode';
@@ -15,28 +15,17 @@ export class TaskTwoComponent implements OnInit {
 
     filteredAnimals: IAnimal[] = [];
 
-    allAnimals: IAnimal[] = [
-        new Bee(),
-        new Cat(),
-        new Duck(),
-        new Hen(),
-        new Horse(),
-        new Pig(),
-        new Sheep(),
-    ];
+    allAnimals: IAnimal[] = [new Bee(), new Cat(), new Duck(), new Hen(), new Horse(), new Pig(), new Sheep()];
 
     selectedAnimals: IAnimal[] = [];
 
-    constructor(
-        private _titleService: Title,
-        private _fb: FormBuilder
-    ) {
+    constructor(private _titleService: Title, private _fb: FormBuilder) {
         this._titleService.setTitle(this.pageTitle);
     }
 
     ngOnInit(): void {
         this.formData = this._fb.group({
-            'selected_animals': this._fb.control([], [Validators.required])
+            selected_animals: this._fb.control([], [Validators.required]),
         });
     }
 
@@ -45,7 +34,9 @@ export class TaskTwoComponent implements OnInit {
     }
 
     filterAnimal(event): void {
-        this.filteredAnimals = this.allAnimals.filter(x => x.species.toLowerCase().startsWith(event.query.toLowerCase()));
+        this.filteredAnimals = this.allAnimals.filter((x) =>
+            x.species.toLowerCase().startsWith(event.query.toLowerCase())
+        );
     }
 
     generateSong(): void {
