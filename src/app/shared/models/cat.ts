@@ -3,7 +3,7 @@ import { IAnimal } from '../interfaces';
 export class Cat implements IAnimal {
     species = 'cat';
 
-    constructor() { }
+    constructor() {}
 
     getSound(): string {
         return 'meow';

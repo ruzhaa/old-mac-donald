@@ -35,7 +35,7 @@ import { CardModule } from 'primeng/card';
         // third party
         AutoCompleteModule,
         ButtonModule,
-        CardModule
+        CardModule,
     ],
     exports: [
         FormsModule,
@@ -52,9 +52,7 @@ import { CardModule } from 'primeng/card';
         // third party
         AutoCompleteModule,
         ButtonModule,
-        CardModule
-    ]
+        CardModule,
+    ],
 })
-export class SharedModule {
-
-}
+export class SharedModule {}

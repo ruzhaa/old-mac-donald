@@ -4,14 +4,12 @@ import { IAnimal } from 'src/app/shared';
 @Component({
     selector: 'app-verse',
     templateUrl: './verse.component.html',
-    styleUrls: ['./verse.component.scss']
+    styleUrls: ['./verse.component.scss'],
 })
 export class VerseComponent implements OnInit {
     @Input() animal: IAnimal;
 
-    constructor() { }
+    constructor() {}
 
-    ngOnInit(): void {
-    }
-
+    ngOnInit(): void {}
 }

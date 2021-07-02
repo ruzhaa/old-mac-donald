@@ -6,15 +6,8 @@ import { SharedModule } from 'src/app/shared';
 import { TaskOneComponent } from './task-one/task-one.component';
 import { TaskTwoComponent } from './task-two/task-two.component';
 
-
 @NgModule({
     declarations: [TaskOneComponent, TaskTwoComponent],
-    imports: [
-        CommonModule,
-        TasksRoutingModule,
-
-        SharedModule
-    ]
+    imports: [CommonModule, TasksRoutingModule, SharedModule],
 })
-export class TasksModule {
-}
+export class TasksModule {}
