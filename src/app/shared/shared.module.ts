@@ -9,7 +9,6 @@ import { SongComponent } from './components/song/song.component';
 import { VerseComponent } from './components/verse/verse.component';
 
 // pipes
-import { ConsoleLogPipe } from './pipes/console-log.pipe';
 import { StartWithVowelPipe } from './pipes';
 
 // third party
@@ -26,7 +25,6 @@ import { CardModule } from 'primeng/card';
 
         // pipes
         StartWithVowelPipe,
-        ConsoleLogPipe,
     ],
     imports: [
         CommonModule,
@@ -49,7 +47,6 @@ import { CardModule } from 'primeng/card';
         VerseComponent,
 
         // pipes
-        ConsoleLogPipe,
         StartWithVowelPipe,
 
         // third party
